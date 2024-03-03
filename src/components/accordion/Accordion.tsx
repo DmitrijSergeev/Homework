@@ -5,17 +5,10 @@ type AccordionProps = {
     collapsed: boolean
 }
 export const Accordion = ({title, collapsed}: AccordionProps) => {
-    return {collapsed} && <AccordionTitle title={title} collapsed={collapsed}/>
-    // if (collapsed) {
-    //     return <div>
-    //         <AccordionTitle title={title} collapsed={collapsed}/>
-    //     </div>
-    // } else {
-    //     return <div>
-    //         <AccordionTitle title={title} collapsed={collapsed}/>
-    //         <AccordionBody/>
-    //     </div>
-    // }
+    return <div>
+        <AccordionTitle title={title} collapsed={collapsed}/>
+        { collapsed && <AccordionBody/> }
+    </div>
 };
 export const AccordionTitle = ({title}: AccordionProps) => {
     return <div>

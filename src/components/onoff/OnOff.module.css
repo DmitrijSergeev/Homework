@@ -1,0 +1,11 @@
+.switch{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: cornflowerblue solid 2px;
+}
+.on, .off{
+    width: 50px;
+    height: 30px;
+    border: chocolate solid 2px;
+}
