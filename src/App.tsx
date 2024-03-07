@@ -19,7 +19,7 @@ function App() {
             <Accordion title={'Hello world'} collapsed={true}/>
             <Accordion title={'Bye world'} collapsed={false}/>
 
-            <OnOff on={true}/>
+            <OnOff />
         </div>
     );
 }
