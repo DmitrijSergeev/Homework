@@ -1,28 +1,27 @@
 import React from 'react';
 
 export type RatingProps = {
-    value: number
+    value: 0|1|2|3|4|5
 }
 export const Rating = ({value}: RatingProps) => {
 
     return <div>
-        <Star selected={value > 0}/>
-        <Star selected={value > 1}/>
-        <Star selected={value > 2}/>
-        <Star selected={value > 3}/>
-        <Star selected={value > 4}/>
+        {/*<Star selected={value > 0}/>*/}
+        {/*<Star selected={value > 1}/>*/}
+        {/*<Star selected={value > 2}/>*/}
+        {/*<Star selected={value > 3}/>*/}
+        {/*<Star selected={value > 4}/>*/}
     </div>
 };
 
 type StarProps = {
     selected: boolean|number
+    value: 0|1|2|3|4|5
+    setValue: (value: 0|1 | 2 | 3 | 4 | 5 )=>void
 }
 
-export function Star({selected}: StarProps) {
-
-    if (selected) {
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }
+export function Star({selected, setValue, value}: StarProps) {
+    return <span onClick={ ()=>{ setValue(value) } }>
+        {selected ? <b>star </b> : 'star '}
+    </span>
 }
