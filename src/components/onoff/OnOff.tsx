@@ -6,17 +6,17 @@ type OnOffProps = {
 }
 export const OnOff = () => {
 
-    const [on, setOn] = useState(true)
+    const [on, setOn] = useState(false)
 
-    const colorOn = on ? s.on : s.colorWhite;
-    const colorOff = on ? s.colorWhite : s.off;
-    const switchColor = on ? `${s.switch} ${s.on}` : `${s.switch} ${s.off}`
+    const colorOn = on ? s.colorWhite : s.on;
+    const colorOff = on ? s.off : s.colorWhite;
+    const switchColor = on ? `${s.switch} ${s.off}` : `${s.switch} ${s.on}`
 
     const onClick = () => {
-        setOn(!on)
+        setOn(false)
     }
     const offClick = () => {
-        setOn(!on)
+        setOn(true)
     }
 
     return (

@@ -15,10 +15,10 @@ export const Rating = ({value}: RatingProps) => {
 };
 
 type StarProps = {
-    selected: boolean
+    selected: boolean|number
 }
 
-function Star({selected}: StarProps) {
+export function Star({selected}: StarProps) {
 
     if (selected) {
         return <span><b>star </b></span>
