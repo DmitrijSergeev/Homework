@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import {AccordionProps} from "./Accordion";
+import {AccordionProps} from "./ControlledAccordion";
+import {AccordionTitle} from "./AccordionTitle";
+import {AccordionBody} from "./AccordionBody";
 
 export type UncontrolledProps = {
     title: string
@@ -13,22 +15,4 @@ export const UncontrolledAccordion = ({title}: AccordionProps) => {
         { !collapsed && <AccordionBody/> }
     </div>
 };
-export const AccordionTitle = ({title, onClick}: UncontrolledProps) => {
-    return <div>
-        <h1 onClick={ ()=>{
-            if (onClick) {
-                onClick()
-            }} }>{title}</h1>
-    </div>
-};
-export const AccordionBody = () => {
-    return (
-        <div>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
-    );
-};
+

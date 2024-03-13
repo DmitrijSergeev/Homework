@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Star} from "./Rating";
+import {Star} from "./ControlledRating";
 
 export const UncontrolledRating = () => {
 

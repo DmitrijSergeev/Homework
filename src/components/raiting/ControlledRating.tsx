@@ -3,7 +3,7 @@ import React from 'react';
 export type RatingProps = {
     value: 0|1|2|3|4|5
 }
-export const Rating = ({value}: RatingProps) => {
+export const ControlledRating = ({value}: RatingProps) => {
 
     return <div>
         {/*<Star selected={value > 0}/>*/}
